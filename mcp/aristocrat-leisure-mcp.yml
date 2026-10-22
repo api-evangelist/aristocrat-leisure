@@ -1,0 +1,28 @@
+type: MCPServer
+name: Aristocrat Leisure MCP server
+generated: '2026-10-21'
+method: none
+status: none
+description: >-
+  No official MCP server from Aristocrat Leisure was found, hosted or local. Aristocrat publishes no
+  public OpenAPI or developer API reference, so we could not derive a candidate tool list either.
+evidence:
+  - url: https://www.aristocrat.com/.well-known/mcp.json
+    status: 404
+    note: Probed with GET on 2026-10-21.
+  - url: https://portal.aristocrat.com/mcp
+    status: 403
+    note: >-
+      Found by the pre-flight path probe, which returned 403 to GET and 405 to the control request.
+      portal.aristocrat.com is an Okta sign-in portal. Aristocrat does not document or advertise an MCP
+      endpoint on it, so we recorded it as observed only and treated it as no MCP server.
+  - url: https://ir.aristocrat.com/mcp
+    status: 403
+    note: The edge returns 403 to every path, including the control request (opaque). This proves nothing either way.
+  - search: Aristocrat Leisure MCP server OR developer API OR llms.txt
+    result: No results named Aristocrat (2026-10-21).
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

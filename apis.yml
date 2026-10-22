@@ -1,23 +1,106 @@
 aid: aristocrat-leisure
+
 name: Aristocrat Leisure
-description: 'Aristocrat Leisure is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aristocrat Leisure Limited (ASX: ALL) describes itself as a global gaming content and technology
+  company and mobile games publisher. Its corporate site at aristocrat.com covers its gaming business
+  (Aristocrat Gaming) and mobile games (Pixel United), alongside news, investor relations and careers.
+  No public developer portal, API documentation or API reference was found on its own site; portal.aristocrat.com
+  is a sign-in portal, not developer documentation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aristocrat-leisure/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Gaming
+- Casino Gaming
+- Mobile Games
+- Gaming Technology
+- Entertainment
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://s25652.pcdn.co/wp-content/uploads/2021/11/aristocrat-home.jpg.optimal.jpg
+
 common:
+- type: Vendors
+  url: vendors/aristocrat-leisure-vendors.yml
+- type: WellKnown
+  url: well-known/aristocrat-leisure-well-known.yml
+- type: Hosts
+  url: hosts/aristocrat-leisure-hosts.yml
+- type: DeveloperPortal
+  url: https://portal.aristocrat.com/
+- type: DomainSecurity
+  url: security/aristocrat-leisure-domain-security.yml
 - type: Website
-  url: https://aristocrat.com/
+  url: https://www.aristocrat.com/
+- type: About
+  url: https://www.aristocrat.com/about/
+- type: Newsroom
+  url: https://www.aristocrat.com/news/
+- type: Support
+  url: https://www.aristocrat.com/contact-us/
+- type: TermsOfService
+  url: https://www.aristocrat.com/legal-terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.aristocrat.com/privacy-policy/
+- type: InvestorRelations
+  url: https://ir.aristocrat.com/
+- type: Careers
+  url: https://careers.aristocrat.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aristocratcorporate
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: 'Website verified: www.aristocrat.com titles itself "Aristocrat Leisure Limited (ASX: ALL)".
+    ir. and careers. are linked from the homepage but answered 403 / Cloudflare challenge to our crawler
+    (edge policy, not dead). portal.aristocrat.com is an SSO sign-in (redirects to /app/UserHome), not
+    a developer portal, so it was not recorded. github.com/aristocrat is an unrelated personal account.'
+  evidence:
+  - url: https://aristocrat.com/
+    status: 200
+  - url: https://www.aristocrat.com/legal-terms-of-use/
+    status: 200
+  - url: https://www.aristocrat.com/privacy-policy/
+    status: 200
+  - url: https://www.aristocrat.com/contact-us/
+    status: 200
+  - url: https://www.aristocrat.com/about/
+    status: 200
+  - url: https://www.aristocrat.com/news/
+    status: 200
+  - url: https://ir.aristocrat.com/
+    status: 403
+  - url: https://careers.aristocrat.com/
+    status: 403
+  - url: https://portal.aristocrat.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 13
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

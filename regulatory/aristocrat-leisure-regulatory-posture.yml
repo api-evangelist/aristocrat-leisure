@@ -1,0 +1,100 @@
+generated: '2026-10-21'
+method: searched
+probe: true
+source: https://www.aristocrat.com/privacy-policy/
+notes: >-
+  The privacy notice body is injected client-side by OneTrust (privacyportal-cdn.onetrust.com privacynotice.json);
+  a plain GET of the page returned 200 with only the site shell, so the text below was read from the
+  rendered page (fetch-url.py --render). Notice header reads "LAST UPDATED: July 9th, 2026". The notice
+  names Aristocrat Leisure Limited, Aristocrat Technologies Australia Pty Ltd and Aristocrat Technologies, Inc.
+  The page also has a "Do-Not-Track (DNT) Signals" section, but it only describes DNT. It never says whether
+  Aristocrat honours DNT or Global Privacy Control, so no global_privacy_control signal is recorded.
+signals:
+  data_subject_request:
+    url: https://www.aristocrat.com/privacy-policy/
+    section: '7. WHAT ARE YOUR PRIVACY RIGHTS AND CHOICES?'
+    channel: privacy@aristocrat.com
+    rights_named: [access (portable format), deletion, correction, restriction/objection, withdrawal of consent, authorized agent, appeal]
+    evidence:
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "Depending on where you live, you may have certain rights under applicable data protection laws. These may include the right: To access to your personal information in a portable format, or other information about our data processing practices. To delete the personal information, we have collected about you."
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "You can request to exercise these rights by emailing your request to: privacy@aristocrat.com. Once we receive your request, we may verify it by requesting information sufficient to confirm your identity."
+    note: >-
+      The notice names the data subject rights, says they depend on where the person lives, gives an email
+      channel and says requests may be identity-verified. It also covers authorized agents and appeals.
+      No response time is stated.
+  data_retention:
+    url: https://www.aristocrat.com/privacy-policy/
+    section: '4. HOW LONG DO WE KEEP YOUR INFORMATION?'
+    evidence:
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "We will keep your personal information for as long as it is necessary for the purposes set out above, considering criteria such as whether a longer retention period is required by law, the duration of our relationship with you, and the sensitivity of the relevant information."
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "Where these brands have closed down, personal data of customers will be retained by us for at least 6 years, or as otherwise required by law, in accordance with our gambling and anti-money laundering obligations."
+    note: >-
+      Most data is kept for as long as it is needed, judged against stated criteria. The one fixed period
+      covers closed online gaming brands (the notice names Hey Spin, Mr. Play, Queen Play, Casino Luck,
+      Bet442 and Red Casino): customer data is kept for at least 6 years because of gambling and AML obligations.
+  subprocessors:
+    url: https://www.aristocrat.com/privacy-policy/
+    section: '3. WHEN AND WITH WHOM DO WE DISCLOSE YOUR PERSONAL INFORMATION?'
+    list_published: false
+    evidence:
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "We share your information with third-party vendors and service providers who perform services for us or on our behalf for a variety of purposes such as billing, payment processing, customer service, email deployment, security and performance monitoring, maintaining or servicing accounts, and data processing."
+    note: >-
+      The notice discloses only categories of service providers. The one vendor it names is Google Analytics.
+      No sub-processor list was found.
+  data_residency:
+    url: https://www.aristocrat.com/privacy-policy/
+    section: 'A. Is Your Information Transferred Internationally?'
+    evidence:
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "However, we take necessary measures to protect your personal information in accordance with this Privacy Notice and applicable law, such as standard contractual clauses or data processing agreements, to ensure that transferred personal information remains protected and secure."
+    note: >-
+      This is a statement against residency. The notice says data "may" be transferred to, stored in and
+      processed in other countries, protected by SCCs or DPAs. No regional hosting or residency commitment is offered.
+  age_assurance:
+    url: https://www.aristocrat.com/privacy-policy/
+    section: '6. CHILDREN'
+    evidence:
+    - source: https://www.aristocrat.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "We do not knowingly collect data from or market to children under 18 years of age. The Services are not directed or targeted at minors under the age of 18."
+    note: >-
+      This is only a minimum-age policy (18+) with a way to report a minor and have their data deleted. The
+      privacy notice describes no age-verification mechanism.
+  accessibility_conformance:
+    url: https://www.aristocrat.com/accessibility-statement/
+    section: 'Accessibility Statement'
+    conforms: none-claimed
+    evidence:
+    - source: https://www.aristocrat.com/accessibility-statement/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "As part of our commitment, we are currently in the process of reviewing our compliance with best practices and statutory requirements for accessibility. Following the conclusion of our review, we will update this statement to reflect our current compliance with accessibility standards, and where content is not accessible, we will outline our timeline to bring it into compliance."
+    note: >-
+      An accessibility statement exists, but it claims no conformance level and names no standard
+      (it does not mention WCAG). It says a compliance review is underway.

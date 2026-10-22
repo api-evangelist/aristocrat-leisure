@@ -1,0 +1,21 @@
+generated: '2026-10-21'
+method: none
+source:
+- https://zapier.com/apps/aristocrat-leisure/integrations
+- https://n8n.io/integrations/aristocrat-leisure/
+- https://composio.dev/toolkits/aristocrat-leisure
+- https://monid.ai/tools/aristocrat-leisure
+checked:
+- https://composio.dev/toolkits/aristocrat-leisure
+- https://monid.ai/tools/aristocrat-leisure
+- https://n8n.io/integrations/aristocrat-leisure/
+- https://zapier.com/apps/aristocrat-leisure/integrations
+- https://www.aristocrat.com/sitemap_index.xml
+- https://www.aristocrat.com/partners/ (404)
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
+note: No integrations page or app-marketplace listing. Sitemap "partners" posts are content-distribution business
+  deals (Inspired, BetMGM, Caesars), not API integrations; the Context Networks/Oasis 360 API agreement is third-party
+  press only (intergameonline.com), so no edge was recorded.

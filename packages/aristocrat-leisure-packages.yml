@@ -1,0 +1,8 @@
+generated: '2026-10-21'
+method: none
+source:
+- https://registry.npmjs.org/-/v1/search?text=aristocrat%20gaming&size=5
+- https://pypi.org/pypi/aristocrat/json
+- https://api.github.com/search/repositories?q=org:aristocrat-gaming
+note: No first-party SDK or client library was found. npm search returned only unrelated packages, PyPI has no "aristocrat" project (404), and no Aristocrat GitHub org with repositories was found (github.com/aristocrat is an unrelated personal account). Aristocrat publishes no public developer portal or API docs; portal.aristocrat.com is an Okta SSO sign-in.
+packages: []

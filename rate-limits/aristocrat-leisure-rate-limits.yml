@@ -1,0 +1,7 @@
+name: Aristocrat Leisure rate limits
+generated: '2026-10-21'
+method: none
+source: https://www.aristocrat.com/
+limit_count: 0
+note: No public API documentation exists, so no rate limits are published. The only API reference found is third-party press (intergameonline.com) about a partner-only API agreement for the Oasis 360 casino management system, which names no limits.
+limits: []
